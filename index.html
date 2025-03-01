@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b2a572fab6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Font</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/styles.css" />
-  <script src="https://kit.fontawesome.com/b2a572fab6.js" crossorigin="anonymous"></script>
-  <title>Font</title>
-</head>
-
-<body>
-  <header>
-    <div class="menu-icon">
-      <i class="fa-solid fa-bars fa-2x"></i>
-    </div>
-    <div>
-      <h1>Project Name</h1>
-    </div>
-    <div class="user">
-      <div>
-        <p class="username">Username</p>
+  <body>
+    <header>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars fa-2x"></i>
       </div>
       <div>
-        <i class="fa-solid fa-user fa-xm"></i>
+        <h1>Project Name</h1>
       </div>
-
-      <div class="user-menu">
-        <div class="user-info">
-          <div class="user-icon">
-            <i class="fa-solid fa-user" style="color: #ffffff"></i>
-          </div>
-          <p>Juan Jose Alcazar</p>
+      <div class="user">
+        <div>
+          <p class="username">Username</p>
         </div>
-        <hr />
+        <div>
+          <i class="fa-solid fa-user fa-xm"></i>
+        </div>
+
+        <div class="user-menu">
+          <div class="user-info">
+            <div class="user-icon">
+              <i class="fa-solid fa-user" style="color: #ffffff"></i>
+            </div>
+            <p>Juan Jose Alcazar</p>
+          </div>
+          <hr />
+          <nav>
+            <ul>
+              <li>Perfil</li>
+              <li>Notificaciones</li>
+              <li>Preferencias</li>
+              <li>Configuración</li>
+              <li>Cerrar Sesión</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="flex-container">
+      <div class="sidebar" id="sidebar">
         <nav>
           <ul>
-            <li>Perfil</li>
-            <li>Notificaciones</li>
-            <li>Preferencias</li>
-            <li>Configuración</li>
-            <li>Cerrar Sesión</li>
+            <div class="option">
+              <div></div>
+              <li><i class="fa-solid fa-house fa-xm"></i></li>
+              <h4>Inicio</h4>
+            </div>
+            <div class="option">
+              <div></div>
+              <li><i class="fa-solid fa-truck fa-xm"></i></li>
+              <h4>Productos</h4>
+            </div>
+            <div class="option">
+              <div></div>
+              <li><i class="fa-solid fa-list fa-xm"></i></li>
+              <h4>Servicios</h4>
+            </div>
+            <div class="option">
+              <div></div>
+              <li><i class="fa-solid fa-address-book fa-xm"></i></li>
+              <h4>Contacto</h4>
+            </div>
+            <div class="option">
+              <div></div>
+              <li><i class="fa-solid fa-gear fa-xm"></i></li>
+              <h4>Configuración</h4>
+            </div>
           </ul>
         </nav>
       </div>
-    </div>
-  </header>
-  <main class="flex-container">
-    <div class="sidebar">
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li>Productos</li>
-          <li>Servicios</li>
-          <li>Contacto</li>
-          <li>Configuración</li>
-        </ul>
-      </nav>
-    </div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
+      <div class="article-section">1</div>
+      <div class="article-section">2</div>
+      <div class="article-section">3</div>
+    </main>
 
-  </main>
-
-  <script src="./src/app.js"></script>
-</body>
-
+    <script src="./src/app.js"></script>
+  </body>
 </html>
