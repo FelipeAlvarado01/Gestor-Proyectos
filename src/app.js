@@ -69,10 +69,10 @@ const createTask = document.querySelector(".form-add-project");
 createTask.addEventListener("submit", (event) => {
   event.preventDefault();
   const project = {
-    name: document.querySelector(".project-name").value,
-    description: document.querySelector(".project-description").value,
-    dateStart: document.querySelector(".start-date").value,
-    dateEnd: document.querySelector(".end-date").value,
+    name: document.querySelector("#project-name").value,
+    description: document.querySelector("#project-description").value,
+    dateStart: document.querySelector("#start-date").value,
+    dateEnd: document.querySelector("#end-date").value,
   };
 
   console.log(project);
