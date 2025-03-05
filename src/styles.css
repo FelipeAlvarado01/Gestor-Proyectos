@@ -157,10 +157,11 @@ header {
 
 .colums-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
   gap: 10px;
   padding: 10px;
   background-image: linear-gradient(to top, #d5dceb 0%, #eef1f5 100%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   width: 100%;
   text-align: center;
 }
@@ -182,6 +183,88 @@ header {
   padding: 16px 20px;
   cursor: pointer;
   border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+.add-project {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to top, #ccd6ee 0%, #d2dae6 100%);
+  color: rgb(5, 5, 5);
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #8d9fc7;
+  font-family: "Quicksand", Courier, monospace;
+  width: 400px;
+  height: auto;
+  visibility: hidden;
+}
+.add-project.active {
+  visibility: visible;
+}
+.header-add-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-add-project i {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #7080a5;
+  border-radius: 5px;
+}
+.add-project form {
+  display: flex;
+  flex-direction: column;
+}
+.project-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.add-project form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #2e5c83;
+  color: #0c3483;
+}
+.add-project form textarea {
+  resize: none;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #2e5c83;
+  color: #0c3483;
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.9;
+  color: #0c3483;
+  font-family: "Quicksand", Courier, monospace;
+}
+.date {
+  gap: 10px;
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+.button-create_project {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.button-create_project button {
+  padding: 10px;
+  background-color: #7080a5;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 5px;
   text-align: center;
   font-size: 16px;
 }

@@ -99,15 +99,51 @@
         totam fugiat inventore unde officiis beatae dignissimos voluptatum
         nobis, tempore vero accusamus est?
       </div>-->
-      <div class="colums-content">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <div class="colums-content"></div>
 
+      <div class="add-project">
+        <div class="header-add-project">
+          <h3>Create A Project</h3>
+          <div class="close-button">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <form action="" class="form-add-project">
+          <div class="project-input">
+            <label for="project-name">Name Project:</label>
+            <input
+              id="project-name"
+              name="project-name"
+              type="text"
+              placeholder="Project Name"
+              required
+            />
+          </div>
+
+          <div class="project-input">
+            <label for="project-description">Description:</label>
+            <textarea
+              id="project-description"
+              name="project-description"
+              placeholder="Add a description"
+            ></textarea>
+          </div>
+
+          <div class="date">
+            <label for="start-date">Start date:</label>
+            <input id="start-date" name="start-date" type="date" required />
+
+            <label for="end-date">End date:</label>
+            <input id="end-date" name="end-date" type="date" required />
+          </div>
+
+          <div class="button-create_project">
+            <button type="submit" class="create-project_button">
+              Create Project
+            </button>
+          </div>
+        </form>
+      </div>
       <div class="add-button">
         <i class="fa-solid fa-plus"></i>
       </div>
