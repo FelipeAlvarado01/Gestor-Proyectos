@@ -167,7 +167,7 @@ header {
 }
 .colums-content div {
   min-width: 250px;
-  max-width: 300px;
+  max-height: 300px;
   border: 1px solid #8d9fc7;
   background-color: #afbddb;
   border-radius: 5px;

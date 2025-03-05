@@ -65,7 +65,8 @@ document.addEventListener("click", (event) => {
 
 /*----------save new task at the localstorage------------*/
 const createTask = document.querySelector(".form-add-project");
-
+const projectsSection = document.querySelector(".colums-content");
+const projects = [];
 createTask.addEventListener("submit", (event) => {
   event.preventDefault();
   const project = {
@@ -74,6 +75,23 @@ createTask.addEventListener("submit", (event) => {
     dateStart: document.querySelector("#start-date").value,
     dateEnd: document.querySelector("#end-date").value,
   };
-
-  console.log(project);
+  projects.push(project);
+  localStorage.setItem("projects", JSON.stringify(projects));
+  ShowProjects();
 });
+
+function ShowProjects() {
+  projectsSection.innerHTML = "";
+  projects.forEach((project, index) => {
+    const projectElement = document.createElement("div");
+
+    projectElement.innerHTML = `
+      <h3>${project.name}</h3>
+      <p>${project.description}</p>
+      <small>Inicio: ${project.dateStart} - Fin: ${project.dateEnd}</small>
+      <p></p>
+    `;
+
+    projectsSection.appendChild(projectElement);
+  });
+}
