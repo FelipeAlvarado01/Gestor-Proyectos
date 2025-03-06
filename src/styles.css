@@ -161,7 +161,7 @@ header {
   gap: 10px;
   padding: 10px;
   background-image: linear-gradient(to top, #d5dceb 0%, #eef1f5 100%);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);*/
   width: 100%;
   text-align: center;
 }
@@ -201,6 +201,7 @@ header {
   width: 400px;
   height: auto;
   visibility: hidden;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 .add-project.active {
   visibility: visible;
@@ -262,9 +263,41 @@ textarea::placeholder {
 .button-create_project button {
   padding: 10px;
   background-color: #7080a5;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
+  border: none;
+}
+.notifications-section {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  width: 250px;
+  bottom: 70px;
+  right: 5px;
+  background-color: #8fa0c7;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.notifications-section.active {
+  visibility: visible;
+  transition: opacity 10s ease-in-out;
+  opacity: 0;
+}
+.notifications p {
+  margin-top: 10px;
+}
+.notifications-section div button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 0;
+  background-color: #7082ad;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }

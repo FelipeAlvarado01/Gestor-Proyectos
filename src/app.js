@@ -66,6 +66,7 @@ document.addEventListener("click", (event) => {
 /*----------save new task at the localstorage------------*/
 const createTask = document.querySelector(".form-add-project");
 const projectsSection = document.querySelector(".colums-content");
+const notifications = document.querySelector(".notifications-section");
 const projects = [];
 createTask.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -78,6 +79,8 @@ createTask.addEventListener("submit", (event) => {
   projects.push(project);
   localStorage.setItem("projects", JSON.stringify(projects));
   ShowProjects();
+  newProject.classList.remove("active");
+  notifications.classList.add("active");
 });
 
 function ShowProjects() {
