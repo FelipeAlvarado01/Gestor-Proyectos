@@ -108,7 +108,7 @@ header {
 .sidebar {
   height: auto;
   width: 65px;
-  background-image: linear-gradient(to top, #d5dceb 0%, #eef1f5 100%);
+  background-image: linear-gradient(to top, #b7c2d8 0%, #eef1f5 100%);
   transition: width 500ms ease-in-out;
 }
 .sidebar.expanded {
@@ -157,20 +157,38 @@ header {
 
 .colums-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-template-rows: 205px;
+  gap: 20px;
   padding: 10px;
   background-image: linear-gradient(to top, #d5dceb 0%, #eef1f5 100%);
-  /*box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);*/
   width: 100%;
   text-align: center;
 }
-.colums-content div {
-  min-width: 250px;
-  max-height: 300px;
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  max-height: 200px;
   border: 1px solid #8d9fc7;
-  background-color: #afbddb;
+  background-color: #d8dde9;
   border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Quicksand", Courier, monospace;
+}
+.header-project-section {
+  border-bottom: 1px solid rgb(141, 137, 137);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.description-project-section {
+}
+.dates-project-section {
+  display: flex;
+  justify-content: space-between;
 }
 /*-----button add-----*/
 .add-button {
@@ -206,6 +224,7 @@ header {
 .add-project.active {
   visibility: visible;
 }
+/*-------new project window--------*/
 .header-add-project {
   display: flex;
   flex-direction: row;
@@ -270,24 +289,28 @@ textarea::placeholder {
   font-size: 16px;
   border: none;
 }
+/*-------notifications window--------*/
 .notifications-section {
   display: flex;
   gap: 10px;
   position: fixed;
   width: 250px;
-  bottom: 70px;
+  bottom: 0px;
   right: 5px;
   background-color: #8fa0c7;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   visibility: hidden;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+  transition: 1s;
 }
-
 .notifications-section.active {
   visibility: visible;
-  transition: opacity 10s ease-in-out;
-  opacity: 0;
+
+  opacity: 1;
+  bottom: 70px;
 }
 .notifications p {
   margin-top: 10px;
