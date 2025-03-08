@@ -168,7 +168,6 @@ header {
 .project-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 5px;
   max-height: 200px;
   border: 1px solid #8d9fc7;
@@ -183,12 +182,35 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+.header-project-section i {
+  background-color: #aab3c9;
+  padding: 5px;
+  margin-bottom: 2px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
 }
 .description-project-section {
+  text-align: justify;
+  font-size: small;
+  flex-grow: 1;
+  overflow: auto;
+  margin: 5px 0;
 }
 .dates-project-section {
+  width: 100%;
+  background-color: #aab3c9;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  font-size: small;
+}
+.dates-project-section i {
+  cursor: pointer;
 }
 /*-----button add-----*/
 .add-button {

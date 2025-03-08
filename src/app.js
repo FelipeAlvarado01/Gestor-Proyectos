@@ -96,9 +96,9 @@ function ShowProjects() {
       </div>
 
       <div class="dates-project-section">
-        <small>Inicio: ${project.dateStart} - Fin: ${project.dateEnd}</small>
-        <i class="fa-solid fa-trash"></i>
-      <div>
+          <p>Inicio: ${project.dateStart} - Fin: ${project.dateEnd}</p>
+          <i class="fa-solid fa-trash"></i>
+      </div>
 
     `;
 
